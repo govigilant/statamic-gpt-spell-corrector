@@ -1,0 +1,52 @@
+{
+    "name": "govigilant/statamic-gpt-spell-corrector",
+    "description": "Automatically correct spelling in Statamic Bard fields using OpenAI",
+    "keywords": [
+        "statamic",
+        "openai"
+    ],
+    "homepage": "https://govigilant.io/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vincent Bean",
+            "email": "info@vincentbean.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Vigilant\\GptSpellCorrector\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vigilant\\GptSpellCorrector\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "statamic/cms": "^5.0",
+        "openai-php/laravel": "^v0.10"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Statamic Gpt Spell Corrector",
+            "description": "Statamic Gpt Spell Corrector addon"
+        },
+        "laravel": {
+            "providers": [
+                "Vigilant\\GptSpellCorrector\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
