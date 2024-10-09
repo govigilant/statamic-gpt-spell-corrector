@@ -36,7 +36,9 @@ class SpellCorrectorController extends Controller
 
                     echo $text;
 
-                    ob_flush();
+                    if (ob_get_level() > 0) {
+                        ob_flush();
+                    }
                     flush();
                 }
             },
